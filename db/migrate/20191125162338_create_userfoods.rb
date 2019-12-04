@@ -4,6 +4,8 @@ class CreateUserfoods < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.integer :food_id
       t.string :mealtime
+      t.timestamps
+
     end
   end
 end

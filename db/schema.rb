@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_162338) do
+ActiveRecord::Schema.define(version: 2019_12_02_222151) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2019_11_25_162338) do
     t.integer "user_id"
     t.integer "food_id"
     t.string "mealtime"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,7 +39,6 @@ ActiveRecord::Schema.define(version: 2019_11_25_162338) do
     t.integer "age"
     t.integer "height"
     t.integer "weight"
-    t.integer "activityLevel"
     t.integer "BMR"
     t.integer "calories"
     t.integer "carbPercent"
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(version: 2019_11_25_162338) do
     t.integer "carbCalories"
     t.integer "fatCalories"
     t.integer "proteinCalories"
+    t.float "activityLevel"
   end
 
 end
